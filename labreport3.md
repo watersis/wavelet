@@ -46,17 +46,17 @@ class SearchEngine {
 }
 ```
 When we enter this URL, we call the handleRequest method. The input is the URL. The path of it contains "/add" so it enters the first if condition.<br> We split the query with "=" and create a new string array parameters. Since the first element of parameters is "s", we add<br> the second element of parameters to the list called result, which is created in the class Handler. And we wil return the second<br> element of parameters, which here is pineapple. So, now "pineapple" is added to result.
-![Image](screenshot1.png)
+![Image](Screenshot1.png)
 Similarly, this time, we add "app" to the list called result. result now is {"pineapple", "app"}.
-![Image](screenshot2.png)
+![Image](Screenshot2.png)
 When we enter this URL, we call the handleRequest method. The path of it contains "/search" so it enters the second if condition.<br>
 We split query with "=" and create a new string array parameters. Create an empty string called s1. parameters[1] is "app", the string that <br> we are searching for. The result now contains "pineapple" and "app", and both contain "app." The for loop will add "pineapple" and "app" to s1 and will return s1. s1 is "pineapple app ".
 #part2
 ##bug1
 my input is Arrays.asList(“Hello”, “e”, “banana”) and my stringchecker will check if the string is longer than 3. expected:<[Hello, banana]> <br>but was:<[banana, Hello]>. The bug is that we add new selected element to index 0. We can fix this by just using result.add(s) rather <br>than result.add(0,s).<br>
-![Image](screenshot6.png)
-![Image](screenshot5.png)
-![Image](screenshot7.png)
+![Image](Screenshot6.png)
+![Image](Screenshot5.png)
+![Image](Screenshot7.png)
 ##bug2
 For test method testReverseInPlace4, My input is [1,2,3,4,5] and I expect the input to be [5,4,3,2,1]. The symptom is that arrays first <br>differed at element [0]; expected:<5> but was:<0>. This is because we assign the value of the original array to the new array we <br>created. So the value is all 0, which is the default value for a new array.<br>
-![Image](screenshot8.png)
+![Image](Screenshot8.png)
