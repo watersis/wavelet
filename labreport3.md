@@ -46,7 +46,7 @@ class SearchEngine {
 }
 ```
 When we enter this URL, we call the handleRequest method. The input is the URL. The path of it contains "/add" so it enters the first if condition.<br> We split the query with "=" and create a new string array parameters. Since the first element of parameters is "s", we add<br> the second element of parameters to the list called result, which is created in the class Handler. And we wil return the second<br> element of parameters, which here is pineapple. So, now "pineapple" is added to result.
-![Image](Screenshot1.png)
+![Image](Screeshot1.png)
 Similarly, this time, we add "app" to the list called result. result now is {"pineapple", "app"}.
 ![Image](Screenshot2.png)
 When we enter this URL, we call the handleRequest method. The path of it contains "/search" so it enters the second if condition.<br>
